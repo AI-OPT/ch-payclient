@@ -1,0 +1,124 @@
+group 'com.ai.opt.chpay'
+
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+sourceCompatibility = 1.7
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+configurations.all { 
+	    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+	    resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds'
+ 	}
+ext {
+    appName="ch-payclient"
+    moduleVersion='1.0-SNAPSHOT'
+    builtBy="gradle 2.2"
+    publishUserName = "runnerdev"
+    publishUserPassword = "runnerdev"
+    publishURL = "http://10.1.228.199:18081/nexus/content/repositories/snapshots/"
+    //publishURL = "http://10.1.228.199:18081/nexus/content/repositories/releases/"
+}
+
+repositories { maven { url "http://10.1.228.199:18081/nexus/content/groups/public/" } }
+
+dependencies {
+
+	//compile fileTree(dir: "lib", include: '*.jar')
+	
+	
+	//third jars from changhong
+	compile 'com.ylink:framework-core:0.0.1'
+	compile 'com.ylink:framework-util:0.0.1'
+	compile 'com.ylink:upp-common:0.0.1'
+	
+	//jars from ai
+	compile 'org.slf4j:slf4j-api:1.7.12'
+	compile "org.springframework:spring-context:4.1.7.RELEASE"
+	compile "org.springframework:spring-oxm:4.1.7.RELEASE"
+	compile 'commons-lang:commons-lang:2.6'
+	compile 'org.dom4j:dom4j:2.0.0'
+	compile 'com.google.code.gson:gson:2.3.1'
+}
+
+jar {
+    baseName appName
+    version moduleVersion
+//    include "com/ai/opt/sdk/*/**"
+    manifest {
+        attributes 'packageName': baseName, 'Built-By': builtBy,'create-date': new Date().format('yyyy-MM-dd HH:mm:ss'), 'Manifest-Version': version
+    }
+}
+
+publishing {
+    publications {
+        publishing.publications.create("${appName}", MavenPublication) {
+            groupId group
+            artifactId appName
+            version moduleVersion
+            artifact jar
+            pom.withXml {
+                asNode().children().last() + {
+                    delegate.dependencies {
+                        delegate.dependency {
+                            delegate.groupId("com.ylink")
+                            delegate.artifactId("framework-core")
+                            delegate.version("0.0.1")
+                        }
+                        delegate.dependency {
+                            delegate.groupId("com.ylink")
+                            delegate.artifactId("framework-util")
+                            delegate.version("0.0.1")
+                        }
+                        delegate.dependency {
+                            delegate.groupId("com.ylink")
+                            delegate.artifactId("upp-common")
+                            delegate.version("0.0.1")
+                        }
+                        
+                        delegate.dependency {
+                            delegate.groupId("org.slf4j")
+                            delegate.artifactId("slf4j-api")
+                            delegate.version("1.7.12")
+                        }
+                        delegate.dependency {
+                            delegate.groupId("org.springframework")
+                            delegate.artifactId("spring-context")
+                            delegate.version("4.1.7.RELEASE")
+                        }
+                        delegate.dependency {
+                            delegate.groupId("org.springframework")
+                            delegate.artifactId("spring-oxm")
+                            delegate.version("4.1.7.RELEASE")
+                        }
+                        delegate.dependency {
+                            delegate.groupId("commons-lang")
+                            delegate.artifactId("commons-lang")
+                            delegate.version("2.6")
+                        }
+                        delegate.dependency {
+                            delegate.groupId("org.dom4j")
+                            delegate.artifactId("dom4j")
+                            delegate.version("2.0.0")
+                        }
+                        delegate.dependency {
+                            delegate.groupId("com.google.code.gson")
+                            delegate.artifactId("gson")
+                            delegate.version("2.3.1")
+                        }
+ 			
+                    }
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            url publishURL
+            credentials {
+                username = publishUserName
+                password = publishUserPassword
+            }
+        }
+    }
+}
