@@ -32,21 +32,63 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "invoiceBody"
+    "grpHdr",
+    "grpBody"
 })
 @XmlRootElement(name = "RespInfo", namespace = "600.001.01")
 public class RespInfo implements XmlBodyEntity{
 
-    @XmlElement(name = "InvoiceBody", namespace = "600.001.01", required = true)
-    protected InvoiceBody invoiceBody;
+    @XmlElement(name = "GrpHdr", namespace = "600.001.01", required = true)
+    protected GrpHdr grpHdr;
+    @XmlElement(name = "GrpBody", namespace = "600.001.01", required = true)
+    protected GrpBody grpBody;
 
-	public InvoiceBody getInvoiceBody() {
-		return invoiceBody;
-	}
+    /**
+     * Gets the value of the grpHdr property.
+     *
+     * @return
+     *     possible object is
+     *     {@link GrpHdr }
+     *
+     */
+    public GrpHdr getGrpHdr() {
+        return grpHdr;
+    }
 
-	public void setInvoiceBody(InvoiceBody invoiceBody) {
-		this.invoiceBody = invoiceBody;
-	}
+    /**
+     * Sets the value of the grpHdr property.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link GrpHdr }
+     *
+     */
+    public void setGrpHdr(GrpHdr value) {
+        this.grpHdr = value;
+    }
 
-    
+    /**
+     * Gets the value of the grpBody property.
+     *
+     * @return
+     *     possible object is
+     *     {@link GrpBody }
+     *
+     */
+    public GrpBody getGrpBody() {
+        return grpBody;
+    }
+
+    /**
+     * Sets the value of the grpBody property.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link GrpBody }
+     *
+     */
+    public void setGrpBody(GrpBody value) {
+        this.grpBody = value;
+    }
+
 }

@@ -38,13 +38,20 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link InvoiceBody }
+     * Create an instance of {@link GrpHdr }
      * 
      */
-    public InvoiceBody createInvoiceBody() {
-        return new InvoiceBody();
+    public GrpHdr createGrpHdr() {
+        return new GrpHdr();
     }
 
+    /**
+     * Create an instance of {@link GrpBody }
+     * 
+     */
+    public GrpBody createGrpBody() {
+        return new GrpBody();
+    }
 
     /**
      * Create an instance of {@link StsRsn }

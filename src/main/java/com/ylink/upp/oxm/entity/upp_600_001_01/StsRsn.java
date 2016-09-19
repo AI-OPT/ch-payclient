@@ -17,8 +17,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="RespCode" type="{600.001.01}Exact5NumericText"/>
- *         &lt;element name="RespDesc" type="{600.001.01}Max64Text"/>
+ *         &lt;element name="RespCode" type="{599.001.01}Exact5NumericText"/>
+ *         &lt;element name="RespDesc" type="{599.001.01}Max64Text"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -28,15 +28,15 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "stsRsn", namespace = "600.001.01", propOrder = {
+@XmlType(name = "stsRsn", namespace = "599.001.01", propOrder = {
     "respCode",
     "respDesc"
 })
 public class StsRsn {
 
-    @XmlElement(name = "RespCode", namespace = "600.001.01", required = true)
+    @XmlElement(name = "RespCode", namespace = "599.001.01", required = true)
     protected String respCode;
-    @XmlElement(name = "RespDesc", namespace = "600.001.01", required = true)
+    @XmlElement(name = "RespDesc", namespace = "599.001.01", required = true)
     protected String respDesc;
 
     /**
