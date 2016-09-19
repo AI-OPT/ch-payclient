@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class MsgString{
 
-    private String headerMsg;
+    private String headerMsg;  
     private String xmlBody;
     private String DigitalSign;
     private List<String> detail;
