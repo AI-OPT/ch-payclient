@@ -13,6 +13,7 @@ public enum TranType {
    ,PAY_QUERY_RESULT("301.001.01","支付查询应答")
  
    ,COMMON("599.001.01","通用应答")
+   ,INVOICE_PRINT("600.001.01", "发票打印通知")
    
    ,PAY_GUARANTEE_MONEY("104.001.01", "保证金扣款")
    ,PAY_GUARANTEE_MONEY_NOTICE("105.001.01", "保证金扣款通知")
