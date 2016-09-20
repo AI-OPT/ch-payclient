@@ -14,7 +14,7 @@ public enum TranType {
  
    ,COMMON("599.001.01","通用应答")
    ,INVOICE_PRINT("600.001.01", "发票打印通知")
-   
+   ,REFUND("801.001.01","退款申请")
    ,PAY_GUARANTEE_MONEY("104.001.01", "保证金扣款")
    ,PAY_GUARANTEE_MONEY_NOTICE("105.001.01", "保证金扣款通知")
    ,PAY_GUARANTEE_MONEY_QUERY("711.001.01", "保证金支付订单查询")
