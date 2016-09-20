@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "invoiceBody", namespace = "600.001.01", propOrder = {
+@XmlType(name = "grpBody", namespace = "600.001.01", propOrder = {
     "corporationCode",
     "invoiceClass",
     "invoiceKind",
@@ -21,6 +21,7 @@ import javax.xml.bind.annotation.XmlType;
     "buyerMobiile",
     "buyerEmail",
     "buyerCompanyClass",
+    "buyerBankCode",
     "buyerBankAccount",
     "salesOrderNo",
     "orderItem",
@@ -29,12 +30,13 @@ import javax.xml.bind.annotation.XmlType;
     "materialName",
     "materialCode",
     "amount",
-    "discountAmount",
     "quantity",
     "projectUnit",
+    "discountAmount",
     "rate",
     "tax",
     "taxAmount",
+    "settledAmount",
     "settledQuantity",
     "unSettledQuantity",
     "unSettledAmount",
@@ -46,10 +48,10 @@ public class  GrpBody {
     @XmlElement(name = "CorporationCode", namespace = "600.001.01", required = true)
     protected String corporationCode;
     @XmlElement(name = "InvoiceClass", namespace = "600.001.01", required = true)
-    protected int invoiceClass;
+    protected String invoiceClass;
     @XmlElement(name = "InvoiceKind", namespace = "600.001.01", required = true)
     protected String invoiceKind;
-    @XmlElement(name = "BuyerTaxpayerNumber", namespace = "600.001.01", required = true)
+    @XmlElement(name = "BuyerTaxpayerNumber", namespace = "600.001.01")
     protected String buyerTaxpayerNumber ;
     @XmlElement(name = "BuyerCode", namespace = "600.001.01", required = true)
     protected String buyerCode ;
@@ -59,9 +61,9 @@ public class  GrpBody {
     protected String buyerName;
     @XmlElement(name = "BuyerAddress", namespace = "600.001.01", required = true)
     protected String  buyerAddress;
-    @XmlElement(name = "BuyerProvince", namespace = "600.001.01", required = true)
+    @XmlElement(name = "BuyerProvince", namespace = "600.001.01")
     protected String buyerProvince;
-    @XmlElement(name = "BuyerTelephone", namespace = "600.001.01", required = true)
+    @XmlElement(name = "BuyerTelephone", namespace = "600.001.01")
     protected String buyerTelephone  ;
     @XmlElement(name = "BuyerMobiile", namespace = "600.001.01", required = true)
     protected String buyerMobiile  ;
@@ -69,45 +71,49 @@ public class  GrpBody {
     protected String buyerEmail  ;
     @XmlElement(name = "BuyerCompanyClass", namespace = "600.001.01", required = true)
     protected String buyerCompanyClass ;
-    @XmlElement(name = "BuyerBankAccount", namespace = "600.001.01", required = true)
+    @XmlElement(name = "BuyerBankCode", namespace = "600.001.01")
+    protected String buyerBankCode ;
+    @XmlElement(name = "BuyerBankAccount", namespace = "600.001.01")
     protected String buyerBankAccount  ;
-    @XmlElement(name = "SalesOrderNo", namespace = "600.001.01", required = true)
+    @XmlElement(name = "SalesOrderNo", namespace = "600.001.01")
     protected String salesOrderNo  ;
-    @XmlElement(name = "OrderItem", namespace = "600.001.01", required = true)
+    @XmlElement(name = "OrderItem", namespace = "600.001.01")
     protected String orderItem;
     @XmlElement(name = "OrderCreateTime", namespace = "600.001.01", required = true)
     protected String orderCreateTime ;
-    @XmlElement(name = "DeliveryOrderNo", namespace = "600.001.01", required = true)
+    @XmlElement(name = "DeliveryOrderNo", namespace = "600.001.01")
     protected String deliveryOrderNo   ;
-    @XmlElement(name = "MaterialName", namespace = "600.001.01", required = true)
-    protected String materialName   ;
     @XmlElement(name = "MaterialCode", namespace = "600.001.01", required = true)
     protected String materialCode   ;
+    @XmlElement(name = "MaterialName", namespace = "600.001.01", required = true)
+    protected String materialName   ;
     @XmlElement(name = "Amount", namespace = "600.001.01", required = true)
-    protected double amount   ;
-    @XmlElement(name = "DiscountAmount", namespace = "600.001.01", required = true)
-    protected double discountAmount   ;
+    protected String amount   ;
     @XmlElement(name = "Quantity", namespace = "600.001.01", required = true)
-    protected int quantity   ;
-    @XmlElement(name = "ProjectUnit", namespace = "600.001.01", required = true)
+    protected String quantity   ;
+    @XmlElement(name = "ProjectUnit", namespace = "600.001.01")
     protected String projectUnit  ;
+    @XmlElement(name = "DiscountAmount", namespace = "600.001.01", required = true)
+    protected String discountAmount;
     @XmlElement(name = "Rate", namespace = "600.001.01", required = true)
-    protected double rate   ;
+    protected String rate;
     @XmlElement(name = "Tax", namespace = "600.001.01", required = true)
-    protected double tax   ;
+    protected String tax;
     @XmlElement(name = "TaxAmount", namespace = "600.001.01", required = true)
-    protected double taxAmount    ;
-    @XmlElement(name = "SettledQuantity", namespace = "600.001.01", required = true)
-    protected int settledQuantity    ;
-    @XmlElement(name = "UnSettledQuantity", namespace = "600.001.01", required = true)
-    protected int unSettledQuantity    ;
-    @XmlElement(name = "UnSettledAmount", namespace = "600.001.01", required = true)
-    protected double unSettledAmount    ;
-    @XmlElement(name = "VoucherNumber", namespace = "600.001.01", required = true)
+    protected String taxAmount;
+    @XmlElement(name = "SettledAmount", namespace = "600.001.01")
+    protected String settledAmount;
+    @XmlElement(name = "SettledQuantity", namespace = "600.001.01")
+    protected String settledQuantity;
+    @XmlElement(name = "UnSettledQuantity", namespace = "600.001.01")
+    protected String unSettledQuantity    ;
+    @XmlElement(name = "UnSettledAmount", namespace = "600.001.01")
+    protected String unSettledAmount    ;
+    @XmlElement(name = "VoucherNumber", namespace = "600.001.01")
     protected String voucherNumber    ;
-    @XmlElement(name = "VoucherData", namespace = "600.001.01", required = true)
+    @XmlElement(name = "VoucherData", namespace = "600.001.01")
     protected String voucherData   ;
-    @XmlElement(name = "ProducteGroup", namespace = "600.001.01")
+    @XmlElement(name = "ProducteGroup", namespace = "600.001.01", required = true)
     protected String producteGroup   ;
 	public String getCorporationCode() {
 		return corporationCode;
@@ -115,10 +121,10 @@ public class  GrpBody {
 	public void setCorporationCode(String corporationCode) {
 		this.corporationCode = corporationCode;
 	}
-	public int getInvoiceClass() {
+	public String getInvoiceClass() {
 		return invoiceClass;
 	}
-	public void setInvoiceClass(int invoiceClass) {
+	public void setInvoiceClass(String invoiceClass) {
 		this.invoiceClass = invoiceClass;
 	}
 	public String getInvoiceKind() {
@@ -187,6 +193,12 @@ public class  GrpBody {
 	public void setBuyerCompanyClass(String buyerCompanyClass) {
 		this.buyerCompanyClass = buyerCompanyClass;
 	}
+	public String getBuyerBankCode() {
+		return buyerBankCode;
+	}
+	public void setBuyerBankCode(String buyerBankCode) {
+		this.buyerBankCode = buyerBankCode;
+	}
 	public String getBuyerBankAccount() {
 		return buyerBankAccount;
 	}
@@ -217,34 +229,28 @@ public class  GrpBody {
 	public void setDeliveryOrderNo(String deliveryOrderNo) {
 		this.deliveryOrderNo = deliveryOrderNo;
 	}
-	public String getMaterialName() {
-		return materialName;
-	}
-	public void setMaterialName(String materialName) {
-		this.materialName = materialName;
-	}
 	public String getMaterialCode() {
 		return materialCode;
 	}
 	public void setMaterialCode(String materialCode) {
 		this.materialCode = materialCode;
 	}
-	public double getAmount() {
+	public String getMaterialName() {
+		return materialName;
+	}
+	public void setMaterialName(String materialName) {
+		this.materialName = materialName;
+	}
+	public String getAmount() {
 		return amount;
 	}
-	public void setAmount(double amount) {
+	public void setAmount(String amount) {
 		this.amount = amount;
 	}
-	public double getDiscountAmount() {
-		return discountAmount;
-	}
-	public void setDiscountAmount(double discountAmount) {
-		this.discountAmount = discountAmount;
-	}
-	public int getQuantity() {
+	public String getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(int quantity) {
+	public void setQuantity(String quantity) {
 		this.quantity = quantity;
 	}
 	public String getProjectUnit() {
@@ -253,40 +259,52 @@ public class  GrpBody {
 	public void setProjectUnit(String projectUnit) {
 		this.projectUnit = projectUnit;
 	}
-	public double getRate() {
+	public String getDiscountAmount() {
+		return discountAmount;
+	}
+	public void setDiscountAmount(String discountAmount) {
+		this.discountAmount = discountAmount;
+	}
+	public String getRate() {
 		return rate;
 	}
-	public void setRate(double rate) {
+	public void setRate(String rate) {
 		this.rate = rate;
 	}
-	public double getTax() {
+	public String getTax() {
 		return tax;
 	}
-	public void setTax(double tax) {
+	public void setTax(String tax) {
 		this.tax = tax;
 	}
-	public double getTaxAmount() {
+	public String getTaxAmount() {
 		return taxAmount;
 	}
-	public void setTaxAmount(double taxAmount) {
+	public void setTaxAmount(String taxAmount) {
 		this.taxAmount = taxAmount;
 	}
-	public int getSettledQuantity() {
+	public String getSettledAmount() {
+		return settledAmount;
+	}
+	public void setSettledAmount(String settledAmount) {
+		this.settledAmount = settledAmount;
+	}
+	public String getSettledQuantity() {
 		return settledQuantity;
 	}
-	public void setSettledQuantity(int settledQuantity) {
+	public void setSettledQuantity(String settledQuantity) {
 		this.settledQuantity = settledQuantity;
 	}
-	public int getUnSettledQuantity() {
+	public String getUnSettledQuantity() {
 		return unSettledQuantity;
 	}
-	public void setUnSettledQuantity(int unSettledQuantity) {
+	public void setUnSettledQuantity(String unSettledQuantity) {
 		this.unSettledQuantity = unSettledQuantity;
 	}
-	public double getUnSettledAmount() {
+	public String getUnSettledAmount() {
 		return unSettledAmount;
 	}
-	public void setUnSettledAmount(double unSettledAmount) {
+	public void setUnSettledAmount(String unSettledAmount) {
 		this.unSettledAmount = unSettledAmount;
 	}
 	public String getVoucherNumber() {
@@ -307,6 +325,7 @@ public class  GrpBody {
 	public void setProducteGroup(String producteGroup) {
 		this.producteGroup = producteGroup;
 	}
+
     
 
 }
