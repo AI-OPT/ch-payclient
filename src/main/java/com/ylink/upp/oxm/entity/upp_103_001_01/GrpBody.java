@@ -5,7 +5,6 @@
 // Generated on: 2016.07.06 at 10:40:53 PM CST 
 //
 
-
 package com.ylink.upp.oxm.entity.upp_103_001_01;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for grpBody complex type.
+ * <p>
+ * Java class for grpBody complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="grpBody">
@@ -43,279 +44,79 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "grpBody", propOrder = {
-    "merOrderId",
-    "custNo",
-    "payTranSn",
-    "orderAmt",
-    "orderDate",
-    "payStatus",
-    "paymentChannel",
-    "paymentMethod",
-    "remark",
-    "resv"
-})
+@XmlType(name = "grpBody", propOrder = { "merOrderId", "payTranSn", "orderAmt", "orderDate", "payStatus", "remark",
+		"resv" })
 public class GrpBody {
 
-    @XmlElement(name = "MerOrderId", required = true)
-    protected String merOrderId;
-    @XmlElement(name = "CustNo")
-    protected String custNo;
-    @XmlElement(name = "PayTranSn", required = true)
-    protected String payTranSn;
-    @XmlElement(name = "OrderAmt", required = true)
-    protected String orderAmt;
-    @XmlElement(name = "OrderDate", required = true)
-    protected String orderDate;
-    @XmlElement(name = "PayStatus", required = true)
-    protected String payStatus;
-    @XmlElement(name = "PaymentChannel", required = true)
-    protected String paymentChannel;
-    @XmlElement(name = "PaymentMethod", required = true)
-    protected String paymentMethod;
-    @XmlElement(name = "Remark")
-    protected String remark;
-    @XmlElement(name = "Resv")
-    protected String resv;
+	@XmlElement(name = "MerOrderId", required = true)
+	protected String merOrderId;
+	@XmlElement(name = "PayTranSn", required = true)
+	protected String payTranSn;
+	@XmlElement(name = "OrderAmt", required = true)
+	protected long orderAmt;
+	@XmlElement(name = "OrderDate", required = true)
+	protected long orderDate;
+	@XmlElement(name = "PayStatus", required = true)
+	protected String payStatus;
+	@XmlElement(name = "Remark")
+	protected String remark;
+	@XmlElement(name = "Resv")
+	protected String resv;
 
-    /**
-     * Gets the value of the merOrderId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getMerOrderId() {
-        return merOrderId;
-    }
+	public String getMerOrderId() {
+		return merOrderId;
+	}
 
-    /**
-     * Sets the value of the merOrderId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setMerOrderId(String value) {
-        this.merOrderId = value;
-    }
-    
-    /**
-     * Gets the value of the custNo property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCustNo() {
-        return custNo;
-    }
+	public void setMerOrderId(String merOrderId) {
+		this.merOrderId = merOrderId;
+	}
 
-    /**
-     * Sets the value of the merOrderId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCustNo(String value) {
-        this.custNo = value;
-    }
+	public String getPayTranSn() {
+		return payTranSn;
+	}
 
-    /**
-     * Gets the value of the payTranSn property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getPayTranSn() {
-        return payTranSn;
-    }
+	public void setPayTranSn(String payTranSn) {
+		this.payTranSn = payTranSn;
+	}
 
-    /**
-     * Sets the value of the payTranSn property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setPayTranSn(String value) {
-        this.payTranSn = value;
-    }
+	public long getOrderAmt() {
+		return orderAmt;
+	}
 
-    /**
-     * Gets the value of the orderAmt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getOrderAmt() {
-        return orderAmt;
-    }
+	public void setOrderAmt(long orderAmt) {
+		this.orderAmt = orderAmt;
+	}
 
-    /**
-     * Sets the value of the orderAmt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setOrderAmt(String value) {
-        this.orderAmt = value;
-    }
+	public long getOrderDate() {
+		return orderDate;
+	}
 
-    /**
-     * Gets the value of the orderDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getOrderDate() {
-        return orderDate;
-    }
+	public void setOrderDate(long orderDate) {
+		this.orderDate = orderDate;
+	}
 
-    /**
-     * Sets the value of the orderDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setOrderDate(String value) {
-        this.orderDate = value;
-    }
+	public String getPayStatus() {
+		return payStatus;
+	}
 
-    /**
-     * Gets the value of the payStatus property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getPayStatus() {
-        return payStatus;
-    }
+	public void setPayStatus(String payStatus) {
+		this.payStatus = payStatus;
+	}
 
-    /**
-     * Sets the value of the payStatus property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setPayStatus(String value) {
-        this.payStatus = value;
-    }
+	public String getRemark() {
+		return remark;
+	}
 
-    /**
-     * Gets the value of the paymentChannel property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getPaymentChannel() {
-        return paymentChannel;
-    }
+	public void setRemark(String remark) {
+		this.remark = remark;
+	}
 
-    /**
-     * Sets the value of the paymentChannel property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setPaymentChannel(String value) {
-        this.paymentChannel = value;
-    }
+	public String getResv() {
+		return resv;
+	}
 
-    /**
-     * Gets the value of the paymentMethod property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getPaymentMethod() {
-        return paymentMethod;
-    }
-
-    /**
-     * Sets the value of the paymentMethod property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setPaymentMethod(String value) {
-        this.paymentMethod = value;
-    }
-
-    /**
-     * Gets the value of the remark property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getRemark() {
-        return remark;
-    }
-
-    /**
-     * Sets the value of the remark property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setRemark(String value) {
-        this.remark = value;
-    }
-
-    /**
-     * Gets the value of the resv property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getResv() {
-        return resv;
-    }
-
-    /**
-     * Sets the value of the resv property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setResv(String value) {
-        this.resv = value;
-    }
+	public void setResv(String resv) {
+		this.resv = resv;
+	}
 
 }
