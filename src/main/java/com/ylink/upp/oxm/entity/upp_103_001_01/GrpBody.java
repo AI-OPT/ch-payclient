@@ -45,7 +45,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "grpBody", propOrder = { "merOrderId", "payTranSn", "orderAmt", "orderDate", "payStatus", "remark",
-		"resv" })
+		"resv","paymentChannel" })
 public class GrpBody {
 
 	@XmlElement(name = "MerOrderId", required = true)
@@ -54,6 +54,8 @@ public class GrpBody {
 	protected String payTranSn;
 	@XmlElement(name = "OrderAmt", required = true)
 	protected long orderAmt;
+	@XmlElement(name = "PaymentChannel", required = true)
+    protected String paymentChannel;
 	@XmlElement(name = "OrderDate", required = true)
 	protected long orderDate;
 	@XmlElement(name = "PayStatus", required = true)
