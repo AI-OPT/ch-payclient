@@ -107,7 +107,7 @@ public class  GrpBody {
     protected String voucherNumber    ;
     @XmlElement(name = "VoucherData", namespace = "600.001.01", required = true)
     protected String voucherData   ;
-    @XmlElement(name = "ProducteGroup", namespace = "600.001.01", required = true)
+    @XmlElement(name = "ProducteGroup", namespace = "600.001.01")
     protected String producteGroup   ;
 	public String getCorporationCode() {
 		return corporationCode;
