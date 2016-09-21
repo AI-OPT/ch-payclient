@@ -121,4 +121,12 @@ public class GrpBody {
 		this.resv = resv;
 	}
 
+	public String getPaymentChannel() {
+		return paymentChannel;
+	}
+
+	public void setPaymentChannel(String paymentChannel) {
+		this.paymentChannel = paymentChannel;
+	}
+
 }
