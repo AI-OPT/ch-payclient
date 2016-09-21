@@ -31,7 +31,6 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="OrderAmt" type="{103.001.01}ExactMax18NumberText"/>
  *         &lt;element name="OrderDate" type="{103.001.01}Exact8NumericText"/>
  *         &lt;element name="PayStatus" type="{103.001.01}Max2Text"/>
- *         &lt;element name="PaymentChannel" type="{103.001.01}Max2Text"/>
  *         &lt;element name="PaymentMethod" type="{103.001.01}Max2Text"/>
  *         &lt;element name="Remark" type="{103.001.01}Max256Text" minOccurs="0"/>
  *         &lt;element name="Resv" type="{103.001.01}Max128Text" minOccurs="0"/>
@@ -54,8 +53,6 @@ public class GrpBody {
 	protected String payTranSn;
 	@XmlElement(name = "OrderAmt", required = true)
 	protected long orderAmt;
-	@XmlElement(name = "PaymentChannel", required = true)
-    protected String paymentChannel;
 	@XmlElement(name = "OrderDate", required = true)
 	protected long orderDate;
 	@XmlElement(name = "PayStatus", required = true)
