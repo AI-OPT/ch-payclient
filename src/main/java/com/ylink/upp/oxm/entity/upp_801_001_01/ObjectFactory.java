@@ -10,6 +10,9 @@ package com.ylink.upp.oxm.entity.upp_801_001_01;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
+import com.ylink.upp.oxm.entity.upp_600_001_01.StsRsn;
+import com.ylink.upp.oxm.entity.upp_600_001_01.StsRsnInf;
+
 
 /**
  * This object contains factory methods for each 
@@ -59,5 +62,19 @@ public class ObjectFactory {
     public GrpBody createGrpBody() {
         return new GrpBody();
     }
+    /**
+     * Create an instance of {@link StsRsn }
+     * 
+     */
+    public StsRsn createStsRsn() {
+        return new StsRsn();
+    }
 
+    /**
+     * Create an instance of {@link StsRsnInf }
+     * 
+     */
+    public StsRsnInf createStsRsnInf() {
+        return new StsRsnInf();
+    }
 }
