@@ -31,6 +31,8 @@ dependencies {
 	compile 'com.ylink:framework-core:0.0.1'
 	compile 'com.ylink:framework-util:0.0.1'
 	compile 'com.ylink:upp-common:0.0.1'
+	compile 'org.bouncycastle:bcprov-jdk16:140'
+	compile 'com.ai.opt:bouncycastle:1.0'
 	
 	//jars from ai
 	compile 'org.slf4j:slf4j-api:1.7.12'
@@ -39,6 +41,7 @@ dependencies {
 	compile 'commons-lang:commons-lang:2.6'
 	compile 'org.dom4j:dom4j:2.0.0'
 	compile 'com.google.code.gson:gson:2.3.1'
+	
 }
 
 jar {
@@ -75,6 +78,19 @@ publishing {
                             delegate.artifactId("upp-common")
                             delegate.version("0.0.1")
                         }
+                        
+                        
+                        delegate.dependency {
+                            delegate.groupId("org.bouncycastle")
+                            delegate.artifactId("bcprov-jdk16")
+                            delegate.version("140")
+                        }
+                        delegate.dependency {
+                            delegate.groupId("com.ai.opt")
+                            delegate.artifactId("bouncycastle")
+                            delegate.version("1.0")
+                        }                        
+                        
                         
                         delegate.dependency {
                             delegate.groupId("org.slf4j")
