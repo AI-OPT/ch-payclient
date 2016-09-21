@@ -62,19 +62,4 @@ public class ObjectFactory {
     public GrpBody createGrpBody() {
         return new GrpBody();
     }
-    /**
-     * Create an instance of {@link StsRsn }
-     * 
-     */
-    public StsRsn createStsRsn() {
-        return new StsRsn();
-    }
-
-    /**
-     * Create an instance of {@link StsRsnInf }
-     * 
-     */
-    public StsRsnInf createStsRsnInf() {
-        return new StsRsnInf();
-    }
 }

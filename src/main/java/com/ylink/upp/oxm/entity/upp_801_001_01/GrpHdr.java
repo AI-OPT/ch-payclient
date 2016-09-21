@@ -26,9 +26,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="MerNo" type="{103.001.01}Max50Text"/>
- *         &lt;element name="CreDtTm" type="{103.001.01}Exact14Text"/>
- *         &lt;element name="TranType" type="{103.001.01}XmlType"/>
+ *         &lt;element name="MerNo" type="{801.001.01}Max50Text"/>
+ *         &lt;element name="CreDtTm" type="{801.001.01}Exact14Text"/>
+ *         &lt;element name="TranType" type="{801.001.01}XmlType"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
