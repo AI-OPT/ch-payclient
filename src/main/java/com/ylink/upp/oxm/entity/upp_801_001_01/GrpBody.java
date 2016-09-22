@@ -32,13 +32,13 @@ public class GrpBody {
     @XmlElement(name = "MerSeqId")
     protected String merSeqId;
     @XmlElement(name = "RefundAmt", required = true)
-    protected long refundAmt;
+    protected String refundAmt;
     @XmlElement(name = "MerRefundSn", required = true)
     protected String merRefundSn;
     @XmlElement(name = "SonMerNo", required = true)
     protected String sonMerNo;
     @XmlElement(name = "RefundDate", required = true)
-    protected long refundDate;
+    protected String refundDate;
     @XmlElement(name = "NotifyUrl", required = true)
     protected String notifyUrl;
     @XmlElement(name = "ReturnUrl", required = true)
@@ -89,16 +89,16 @@ public class GrpBody {
 	public void setResv(String resv) {
 		this.resv = resv;
 	}
-	public long getRefundAmt() {
+	public String getRefundAmt() {
 		return refundAmt;
 	}
-	public void setRefundAmt(long refundAmt) {
+	public void setRefundAmt(String refundAmt) {
 		this.refundAmt = refundAmt;
 	}
-	public long getRefundDate() {
+	public String getRefundDate() {
 		return refundDate;
 	}
-	public void setRefundDate(long refundDate) {
+	public void setRefundDate(String refundDate) {
 		this.refundDate = refundDate;
 	}
 
