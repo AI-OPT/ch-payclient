@@ -12,12 +12,12 @@
 	<!-- 引入数据源文件 -->
 <!--  	<import resource="spring-datasource.xml" /> -->
 <!--  	<import resource="spring-shiro.xml" /> -->
-	<!-- <bean id="oxmHandler" class="com.ylink.upp.base.oxm.util.OxmHandler">
+	<bean id="oxmHandler" class="com.ylink.upp.base.oxm.util.OxmHandler">
 		<property name="unmarshaller" ref="jaxb2Marshaller"/>
 		<property name="marshaller" ref="jaxb2Marshaller"/>
 	</bean>
 	
-	Jaxb 配置
+	<!-- Jaxb 配置 -->
 	<bean id="jaxb2Marshaller" class="com.ylink.upp.base.oxm.util.TwsJaxb2Marshaller" scope="singleton">
 		<property name="marshallerProperties">
 			<map>
@@ -30,15 +30,15 @@
 				<value>com.ylink.upp.oxm.entity</value>
 			</list>
 		</property>
-		<property name="schemasToScan">
-			<list>
-				<value>classpath:config/schema</value>
-			</list>
-		</property>
+<!-- 		<property name="schemasToScan"> -->
+<!-- 			<list> -->
+<!-- 				<value>classpath:config/schema</value> -->
+<!-- 			</list> -->
+<!-- 		</property> -->
 	</bean>
-	上面的属性需要Boolean对象，特殊定义
+	<!-- 上面的属性需要Boolean对象，特殊定义 -->
 	<bean id="booleanTrue" class="java.lang.Boolean">
 		<constructor-arg value="true"/>
-	</bean> -->
+	</bean>
 	
 </beans>
