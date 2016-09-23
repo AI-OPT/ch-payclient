@@ -10,9 +10,6 @@ package com.ylink.upp.oxm.entity.upp_801_001_01;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
-import com.ylink.upp.oxm.entity.upp_600_001_01.StsRsn;
-import com.ylink.upp.oxm.entity.upp_600_001_01.StsRsnInf;
-
 
 /**
  * This object contains factory methods for each 
